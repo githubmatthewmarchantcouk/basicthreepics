@@ -15,7 +15,39 @@
         }
     </style>
 </head>
+<script>
+window.CoBrowsingCustomStrings = {
+  "popup-title": "8x8 Co-browsing",
+  "popup-close": "X",
+  "popup-start-information": "Please Click Start to initialize the Co-browsing session and pass the session ID below to the Agent.",
+  "popup-sync-information": "You may have open another page that is currently being synchronized. Click Synchronize to synchronize this page instead.",
+  "popup-session-id-label": "Session ID: ",
+  "popup-start-button": "Start",
+  "popup-stop-button": "Stop",
+  "popup-sync-button": "Synchronize",
+  "popup-status-label": "Status: ",
 
+  "status-connecting": "Connecting...",
+  "status-ready": "Connected",
+  "status-connected": "Connected",
+  "status-replica-disconnected": "Waiting for agent to connect.",
+  "status-disconnected": "Disconnected",
+  "status-sync-required": "Synchronization required",
+  "status-invalid-license": "Invalid license",
+  "status-limited-license": "All agents are busy, please try again later",
+  "status-invalid-domain-for-license": "Invalid domain for license",
+  "status-disabled-license": "Disabled license"
+};
+</script>
+
+<script> 
+(function(e,i,g,h,t,c,o,b){o=i.createElement(g);o.async=1;o.src=t;o.setAttribute(h,c); 
+b=i.getElementsByTagName(g)[0];b.parentNode.insertBefore(o,b); 
+})(window,document,'script','data-8x8-co-browsing','https://cb.8x8.com/license{67ec4a6512eb3d004d7ac8fd}/dist/primary-bundle.js','67ec4a6512eb3d004d7ac8fd',{
+'data-8x8-co-browsing-multi-domain': true,
+'data-8x8-co-browsing-mode':'full-control'
+});
+</script>
 <body>
 
 <img src="pic6.PNG" alt="Displayed Image">
