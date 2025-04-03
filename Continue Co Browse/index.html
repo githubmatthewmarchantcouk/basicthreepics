@@ -48,7 +48,7 @@ w=i.getElementsByTagName(g)[0];w.parentNode.insertBefore(r,w);
 
 <script>
     if (!window.webchatInitialized) {
-        window.webchatInitialized = true; // Prevents reloading on each page
+        window.webchatInitialized = true; // Ensures only one instance
         initWebchat(
             "https://endpoint-trial.cognigy.ai/4439ac7df5f4b636f5981e72050ff7a0f5ca4462a77e7b21133b80d2f2e83e40",
             {
@@ -58,6 +58,15 @@ w=i.getElementsByTagName(g)[0];w.parentNode.insertBefore(r,w);
                     dynamicImageAspectRatio: true,
                     startBehavior: "button",
                     getStartedButtonText: "Let's Chat"
+                },
+                onReady: function(webchat) {
+                    let savedState = localStorage.getItem("chatState");
+                    if (savedState) {
+                        webchat.restoreState(JSON.parse(savedState));
+                    }
+                },
+                onStateChange: function(webchat) {
+                    localStorage.setItem("chatState", JSON.stringify(webchat.getState()));
                 }
             }
         );
