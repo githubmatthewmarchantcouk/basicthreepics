@@ -50,14 +50,25 @@ window.CoBrowsingCustomStrings = {
   "status-disabled-license": "Disabled license"
 };
 </script>
+	
+<script>
 
-<script> 
-(function(e,i,g,h,t,c,o,b){o=i.createElement(g);o.async=1;o.src=t;o.setAttribute(h,c); 
-b=i.getElementsByTagName(g)[0];b.parentNode.insertBefore(o,b); 
-})(window,document,'script','data-8x8-co-browsing','https://cb.8x8.com/license{67ec4a6512eb3d004d7ac8fd}/dist/primary-bundle.js','67ec4a6512eb3d004d7ac8fd',{
+(function(e,i,g,h,t,c,o,b,r,w){r=i.createElement(g);r.setAttribute(h,c);
+
+o&&Object.keys(o).map(function(k){r.setAttribute(k,o[k])});
+
+r.async=1;r.src='https://'+t+'/license'+c+'/dist/primary-bundle.js';
+
+w=i.getElementsByTagName(g)[0];w.parentNode.insertBefore(r,w);
+
+})(window,document,'script','data-8x8-co-browsing','cb.8x8.com','61e9b014325168004feb37dc',{
+
 'data-8x8-co-browsing-multi-domain': true,
-'data-8x8-co-browsing-mode':'full-control'
+
+'data-8x8-co-browsing-mode':'<Co-browse-mode>'
+
 });
+	
 </script>
 
  <script src="https://github.com/Cognigy/WebchatWidget/releases/latest/download/webchat.js"></script>
